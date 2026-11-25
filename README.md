@@ -1,110 +1,74 @@
-# Smart India Hackathon Workshop
-# Date:25/11/2026
-## Reference Number:26001811
-## Name:P.Nagul
-
-## Problem Title
-SIH 26033: Multiple intermediaries reduce farmers earnings and increase consumer prices.
-
-## Problem Creater's Organization
-Ministry of Consumer Affairs, Food & Public Distribution
-
-## Theme
-Agriculture, FoodTech & Rural Development
-
-## Problem Description
-Expected Solution: Create a digital marketplace that:
-
-• Connects farmers/FPOs directly with consumers and bulk buyers.
-• Provides logistics support.
-• Uses AI for demand forecasting and route optimization.
-
+Smart India Hackathon Workshope,
+accDate: 25/11/2026
+Reference Number: 26001811
+Name: P.Nagul
+Problem Title
+SIH [ID – replace with official number]: Limited access to timely primary healthcare and specialist consultation in rural and remote areas.
+Problem Creator's Organization
+Ministry of Health & Family Welfare (replace if your chosen statement differs)
+Theme
+Medical Devices / HealthTech & Rural Development
+Problem Description
+aExpected Solution: Create a digital health platform that:
+• Connects rural patients with doctors and specialists through low-bandwidth telemedicine.
+• Provides AI-assisted symptom triage and early risk detection.
+• Links Primary Health Centres (PHCs), ASHA workers, pharmacies and diagnostic labs in one workflow.
 Benefits:
-
-• Better prices for farmers.
-• Lower prices for consumers.
-• Reduced supply chain inefficiencies.
-
-## Proposed Solution
-AgriDirect: An AI-Powered Farm-to-Fork Marketplace
-
-AgriDirect is a comprehensive digital ecosystem designed to disintermediate the agricultural supply chain. By functioning as a secure, transparent marketplace, it allows individual farmers and Farmer Producer Organizations (FPOs) to list their produce directly to bulk buyers (restaurants, retailers, food processors) and individual consumers.
-
+• Faster diagnosis and treatment for rural patients.
+• Reduced travel cost and loss of daily wages.
+• Lower load on district hospitals through proper referral.
+Proposed Solution
+SwasthSetu: An AI-Powered Rural Healthcare Bridge
+SwasthSetu is a mobile-first digital health ecosystem that brings doctor consultation, triage and follow-up to villages. ASHA workers and PHC staff register patients, capture symptoms and vitals, and the platform routes each case to the right level of care: self-care advice, a PHC doctor, a remote specialist, or an emergency referral.
 How it addresses the problem:
-
-Direct Discovery & Bidding: Buyers and sellers negotiate directly via a transparent price-matching engine, eliminating the 4-5 layers of traditional middlemen (commission agents, wholesalers, sub-wholesalers).
-
-Integrated Logistics Pooling: The platform features an "Uber-for-Tractors/Trucks" module that aggregates local transport providers, ensuring farmers do not have to manage complex logistics manually.
-
-Predictive Intelligence: AI algorithms analyze historical price trends, weather patterns, and local festival calendars to advise farmers on what to plant and when to sell, minimizing distress sales.
+• AI Symptom Triage: A guided questionnaire plus a risk-scoring model classifies cases as low, medium or high priority, so doctors see urgent cases first.
+• Low-Bandwidth Teleconsultation: Audio-first video calls that fall back to voice and SMS when the network is weak, with consultation notes synced later.
+• Integrated Referral & Medicine Tracking: Digital prescriptions are sent to the nearest partner pharmacy, and the system tracks medicine stock at PHCs to avoid shortages.
+• Follow-up Engine: Automated reminders for medicines, vaccinations and repeat visits, especially for chronic conditions like diabetes and hypertension.
 Innovation and Uniqueness:
-
-Multilingual Voice Bot: A generative AI voice assistant that allows farmers with low digital literacy to list produce, check prices, and request transport entirely via voice commands in regional languages.
-
-Dynamic Route Optimization: Our logistics engine uses graph-based algorithms to consolidate partial loads from multiple neighboring farms into single shipments, reducing transportation costs and carbon emissions.
-
-## Technical Approach
+• Multilingual Voice Assistant: Patients and ASHA workers describe symptoms by voice in their regional language; the assistant converts them to structured medical input.
+• Offline-First Design: The app stores records locally and syncs automatically when connectivity returns, which suits remote villages.
+• Outbreak Heatmaps: Aggregated, anonymised symptom data helps district officers spot disease clusters early.
+Technical Approach
 Technologies to be used:
-
-Frontend (Mobile & Web): React Native (for a unified iOS/Android farmer and buyer app), React.js (for the admin and FPO web dashboard).
-
-Backend & APIs: Node.js with Express, integrated with GraphQL for efficient data fetching.
-
-Database: PostgreSQL (relational data like users, orders) and Redis (caching real-time bids).
-
-AI/ML & Analytics:
-
-Demand Forecasting: Python (TensorFlow/XGBoost) using historical APMC data, weather APIs, and seasonal trends.
-
-Route Optimization: Google OR-Tools for solving the Capacitated Vehicle Routing Problem (CVRP).
-
-Cloud & Infrastructure: AWS (EC2, S3 for image storage), Firebase (Push notifications), and Twilio (SMS/Voice integrations).
-
-Payments: Razorpay/UPI integration with an Escrow system to ensure payment security upon delivery.
-
-
-## Feasibility and Viability
+• Frontend (Mobile & Web): React Native for the patient and ASHA worker app (Android first, with offline storage), React.js for the doctor and PHC admin dashboard.
+• Backend & APIs: Node.js with Express, REST and WebSocket for real-time consultation status.
+• Database: PostgreSQL for patient records and appointments, Redis for queues and session caching, SQLite on device for offline data.
+• AI/ML & Analytics:
+    ◦ Triage Model: Python (scikit-learn / XGBoost) trained on public symptom-disease datasets, with rule-based safety overrides for red-flag symptoms.
+    ◦ Speech & Language: Speech-to-text and translation APIs for regional languages.
+    ◦ Outbreak Analytics: Time-series anomaly detection on aggregated case data.
+• Teleconsultation: WebRTC with adaptive bitrate and audio-only fallback.
+• Cloud & Infrastructure: AWS (EC2, S3 for reports), Firebase (push notifications), Twilio (SMS/IVR).
+• Security & Interoperability: Encrypted data storage, role-based access, consent management, and ABDM (Ayushman Bharat Digital Mission) compatible health IDs and records.
+Feasibility and Viability
 Feasibility of the Idea:
-
-High Digital Penetration: India's rural smartphone and 4G/5G internet penetration is at an all-time high, making mobile-first solutions viable.
-
-Financial Infrastructure: The ubiquity of UPI and Jan Dhan bank accounts ensures that direct, instant payments to farmers are frictionless.
-
-Institutional Support: Partnering with existing FPOs provides immediate scale and acts as local collection hubs for smaller farmers.
-
+• Existing Infrastructure: PHCs, Health & Wellness Centres and a large ASHA network already exist and can act as ground-level access points.
+• Digital Public Infrastructure: ABDM health IDs, UPI and widespread smartphones make digital records and payments practical.
+• Proven Model: Government telemedicine services like eSanjeevani show strong demand, and this solution adds triage, offline support and follow-up.
 Potential Challenges and Risks:
-
-Digital Literacy & Trust: Farmers may be hesitant to shift from traditional agents they have dealt with for generations.
-
-Quality Standardization: Disagreements over the grade or quality of the produce upon delivery.
-
-Logistics in Remote Areas: Lack of reliable transport vehicles in deep rural pockets.
+• Connectivity and Digital Literacy: Weak networks and limited comfort with apps in rural areas.
+• Data Privacy and Trust: Health data is sensitive and patients may worry about misuse.
+• AI Safety: Incorrect triage could delay care, so the AI must not replace a doctor.
+• Doctor Availability: Specialists may be overloaded.
 Strategies for Overcoming Challenges:
-
-Village-Level Entrepreneurs (VLEs): Onboarding local youth to act as platform facilitators who assist farmers in listing produce in exchange for a micro-commission.
-
-Standardized Grading System: Implementing clear, image-based quality grading guidelines on the app, supported by an automated AI image-analysis tool to estimate produce quality.
-
-Third-Party Logistics (3PL) Integration: Integrating with regional logistics startups and local tempo unions to guarantee transport availability.
-
-## Impact and Benefits
+• ASHA-Assisted Model: Trained community workers operate the app on behalf of patients and build trust.
+• Offline-First and SMS/IVR Fallback: Core features keep working without stable internet.
+• Human-in-the-Loop AI: The AI only suggests priority; a qualified doctor makes every final decision, and emergency keywords trigger immediate referral.
+• Privacy by Design: Explicit consent, encryption, anonymised analytics and compliance with Indian data protection rules.
+• Doctor Pooling: Partner with medical colleges, retired doctors and private clinics to share teleconsultation load.
+Impact and Benefits
 Potential Impact on the Target Audience:
-
-Farmers: Shift from price-takers to price-makers. Expected to see a 20-30% increase in net profit margins by bypassing commission agents and mandi fees.
-
-Consumers/Buyers: Access to fresher produce with complete traceability at a 10-15% lower cost compared to retail market prices.
+• Patients: Expected to cut travel time and cost significantly and enable earlier diagnosis, especially for chronic and maternal health conditions.
+• Health Workers: Less paperwork, clearer referral guidance and better decision support.
+• Government and PHCs: Better visibility into disease trends and medicine stock for planning.
 Benefits of the Solution:
-
-Economic: Fair wealth distribution by retaining capital within the rural economy rather than losing it to intermediary urban layers.
-
-Social: Empowers rural communities, promotes digital and financial inclusion, and strengthens the role of FPOs.
-
-Environmental: Optimized logistics routing reduces fuel consumption. Furthermore, demand forecasting drastically reduces post-harvest food waste by aligning supply directly with mapped demand.
-## Research and References
-Dalwai Committee Report (Government of India): Strategies for Doubling Farmers' Income, focusing on supply chain interventions and the removal of intermediary bottlenecks.
-
-e-NAM (National Agriculture Market): Studying the existing digital mandi infrastructure to identify gaps (e.g., lack of integrated last-mile logistics) that this solution fills.
-
-ONDC (Open Network for Digital Commerce): Exploring interoperability protocols for agriculture and grocery to integrate the proposed marketplace with wider retail networks.
-
-Reference Dataset for AI: Agmarknet portal (agmarknet.gov.in) for historical daily market prices and arrival data across India.
+• Economic: Saves wages and travel costs for rural families and reduces avoidable hospital admissions.
+• Social: Improves equity in healthcare access, supports women and elderly patients, and strengthens the role of ASHA workers.
+• Environmental: Fewer long-distance trips and a paperless record system reduce travel emissions and paper use.
+Research and References
+• Ayushman Bharat Digital Mission (ABDM): Framework for health IDs and interoperable digital health records.
+• eSanjeevani (Ministry of Health & Family Welfare): Existing national telemedicine service, studied to identify gaps such as triage, offline support and follow-up.
+• National Health Mission (NHM) and ASHA programme: Community health worker structure used as the ground-level delivery channel.
+• Reference Datasets for AI: Public symptom-disease datasets (for example from Kaggle) and open health data from data.gov.in for prototype training and testing.
+Note: Replace the problem ID, organization and theme with the exact details from the official SIH problem statement you choosordingly.
